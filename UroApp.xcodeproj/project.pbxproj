@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8B9118F163ED96F0044667E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B9118E163ED96F0044667E /* UIKit.framework */; };
+		E8B91191163ED96F0044667E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B91190163ED96F0044667E /* Foundation.framework */; };
+		E8B91193163ED96F0044667E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B91192163ED96F0044667E /* CoreGraphics.framework */; };
+		E8B91199163ED96F0044667E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8B91197163ED96F0044667E /* InfoPlist.strings */; };
+		E8B9119B163ED96F0044667E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B9119A163ED96F0044667E /* main.m */; };
+		E8B9119F163ED96F0044667E /* UroAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B9119E163ED96F0044667E /* UroAppAppDelegate.m */; };
+		E8B911A1163ED96F0044667E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E8B911A0163ED96F0044667E /* Default.png */; };
+		E8B911A3163ED9700044667E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8B911A2163ED9700044667E /* Default@2x.png */; };
+		E8B911A5163ED9700044667E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8B911A4163ED9700044667E /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E8B9118A163ED96F0044667E /* UroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B9118E163ED96F0044667E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E8B91190163ED96F0044667E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E8B91192163ED96F0044667E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E8B91196163ED96F0044667E /* UroApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UroApp-Info.plist"; sourceTree = "<group>"; };
+		E8B91198163ED96F0044667E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E8B9119A163ED96F0044667E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E8B9119C163ED96F0044667E /* UroApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UroApp-Prefix.pch"; sourceTree = "<group>"; };
+		E8B9119D163ED96F0044667E /* UroAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UroAppAppDelegate.h; sourceTree = "<group>"; };
+		E8B9119E163ED96F0044667E /* UroAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UroAppAppDelegate.m; sourceTree = "<group>"; };
+		E8B911A0163ED96F0044667E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E8B911A2163ED9700044667E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E8B911A4163ED9700044667E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8B91187163ED96F0044667E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B9118F163ED96F0044667E /* UIKit.framework in Frameworks */,
+				E8B91191163ED96F0044667E /* Foundation.framework in Frameworks */,
+				E8B91193163ED96F0044667E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8B9117F163ED96F0044667E = {
+			isa = PBXGroup;
+			children = (
+				E8B91194163ED96F0044667E /* UroApp */,
+				E8B9118D163ED96F0044667E /* Frameworks */,
+				E8B9118B163ED96F0044667E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8B9118B163ED96F0044667E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8B9118A163ED96F0044667E /* UroApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8B9118D163ED96F0044667E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8B9118E163ED96F0044667E /* UIKit.framework */,
+				E8B91190163ED96F0044667E /* Foundation.framework */,
+				E8B91192163ED96F0044667E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8B91194163ED96F0044667E /* UroApp */ = {
+			isa = PBXGroup;
+			children = (
+				E8B9119D163ED96F0044667E /* UroAppAppDelegate.h */,
+				E8B9119E163ED96F0044667E /* UroAppAppDelegate.m */,
+				E8B91195163ED96F0044667E /* Supporting Files */,
+			);
+			path = UroApp;
+			sourceTree = "<group>";
+		};
+		E8B91195163ED96F0044667E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8B91196163ED96F0044667E /* UroApp-Info.plist */,
+				E8B91197163ED96F0044667E /* InfoPlist.strings */,
+				E8B9119A163ED96F0044667E /* main.m */,
+				E8B9119C163ED96F0044667E /* UroApp-Prefix.pch */,
+				E8B911A0163ED96F0044667E /* Default.png */,
+				E8B911A2163ED9700044667E /* Default@2x.png */,
+				E8B911A4163ED9700044667E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8B91189163ED96F0044667E /* UroApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8B911A8163ED9700044667E /* Build configuration list for PBXNativeTarget "UroApp" */;
+			buildPhases = (
+				E8B91186163ED96F0044667E /* Sources */,
+				E8B91187163ED96F0044667E /* Frameworks */,
+				E8B91188163ED96F0044667E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UroApp;
+			productName = UroApp;
+			productReference = E8B9118A163ED96F0044667E /* UroApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8B91181163ED96F0044667E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = UroApp;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jeremy Wiygul";
+			};
+			buildConfigurationList = E8B91184163ED96F0044667E /* Build configuration list for PBXProject "UroApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8B9117F163ED96F0044667E;
+			productRefGroup = E8B9118B163ED96F0044667E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8B91189163ED96F0044667E /* UroApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8B91188163ED96F0044667E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B91199163ED96F0044667E /* InfoPlist.strings in Resources */,
+				E8B911A1163ED96F0044667E /* Default.png in Resources */,
+				E8B911A3163ED9700044667E /* Default@2x.png in Resources */,
+				E8B911A5163ED9700044667E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8B91186163ED96F0044667E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B9119B163ED96F0044667E /* main.m in Sources */,
+				E8B9119F163ED96F0044667E /* UroAppAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E8B91197163ED96F0044667E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8B91198163ED96F0044667E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8B911A6163ED9700044667E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E8B911A7163ED9700044667E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8B911A9163ED9700044667E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UroApp/UroApp-Prefix.pch";
+				INFOPLIST_FILE = "UroApp/UroApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E8B911AA163ED9700044667E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UroApp/UroApp-Prefix.pch";
+				INFOPLIST_FILE = "UroApp/UroApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8B91184163ED96F0044667E /* Build configuration list for PBXProject "UroApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8B911A6163ED9700044667E /* Debug */,
+				E8B911A7163ED9700044667E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8B911A8163ED9700044667E /* Build configuration list for PBXNativeTarget "UroApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8B911A9163ED9700044667E /* Debug */,
+				E8B911AA163ED9700044667E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8B91181163ED96F0044667E /* Project object */;
+}
