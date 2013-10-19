@@ -7,16 +7,80 @@
 //
 
 #import "UroAppAppDelegate.h"
-
+#import "IntakeViewController.h"
+#import "OutputViewController.h"
+#import "LogItemStore.h"
+#import "OutputLogItemStore.h"
+#import "MailViewController.h"
+#import "MenuPageViewController.h"
+static int applicationBadge = 0;
 @implementation UroAppAppDelegate
-
+{
+    UIViewController<BannerViewContainer> *currentControl;
+    ADBannerView *bannerView;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    CGRect bounds = [[UIScreen mainScreen] applicationFrame];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    IntakeViewController *vcc = [[IntakeViewController alloc]init];
+    MenuPageViewController *mpvc;
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        mpvc = [[MenuPageViewController alloc]init];
+    }
+    else
+        mpvc = [[MenuPageViewController alloc]initWithNibName:@"MenuPagePadViewController" bundle:nil];
+    OutputViewController *ovc = [[OutputViewController alloc]init];
+    UITabBarController *tbc = [[UITabBarController alloc]init];
+  
+    bannerView = [[ADBannerView alloc]initWithFrame:CGRectMake(0.0, bounds.size.height, 0.0, 0.0)];
+    bannerView.delegate = self;
+    MailViewController *mvc = [[MailViewController alloc]init];
+    tbc.delegate=self;
+    [[tbc tabBar]setBarTintColor:[UIColor blackColor]];
+    [[tbc tabBar]setTranslucent:NO];
+    NSArray *viewcontrols = [[NSArray alloc]initWithObjects:mpvc, vcc,ovc, mvc,nil];
+    [tbc setViewControllers:viewcontrols];
+    currentControl=(UIViewController<BannerViewContainer> *)tbc.selectedViewController;
+    [[self window]setRootViewController:tbc];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(updateBadgeNumber) name:@"increasedBadges" object:nil];
+    NSNotificationCenter *ns = [NSNotificationCenter defaultCenter];
+    [ns addObserver:self selector:@selector(decreaseBadgeNumber) name:@"decreasedBadges" object:nil];
+    NSNotificationCenter *nl = [NSNotificationCenter defaultCenter];
+    [nl addObserver:self selector:@selector(applicationBadgeZero) name:@"badgesSeen" object:nil];
+    applicationBadge += [[[[LogItemStore sharedStore]itemContainer]objectAtIndex:0]pendingPoopBadges];
+    applicationBadge += [[[[LogItemStore sharedStore]itemContainer]objectAtIndex:0]pendingPeeBadges];
+    applicationBadge += [[[[LogItemStore sharedStore]itemContainer]objectAtIndex:0]pendingFiberBadges];
+    applicationBadge += [[[[LogItemStore sharedStore]itemContainer]objectAtIndex:0]pendingFluidBadges];
+    
+    
     return YES;
+}
+-(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+    else
+        return UIInterfaceOrientationMaskPortrait;
+}
+
+-(void)updateBadgeNumber
+{
+    applicationBadge++;
+}
+
+-(void)decreaseBadgeNumber
+{
+    applicationBadge--;
+}
+-(void)applicationBadgeZero
+{
+    applicationBadge = 0;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -27,8 +91,16 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[LogItemStore sharedStore]saveChanges];
+    [[OutputLogItemStore sharedStore]saveChanges];
+    UIApplication *app = [UIApplication sharedApplication];
+    if (applicationBadge >0)
+    app.applicationIconBadgeNumber = applicationBadge;
+    else{
+        applicationBadge = 0;
+        app.applicationIconBadgeNumber = nil;
+    }
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -38,12 +110,53 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    int count = [[[LogItemStore sharedStore]itemContainer]count];
+    NSDate *containerDate = [[[[LogItemStore sharedStore]itemContainer]objectAtIndex:count -1]dateCreated];
+    NSDate *todaysDate = [[NSDate alloc]init];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterNoStyle];
+    NSString *containerString = [formatter stringFromDate:containerDate];
+    
+    NSString *todaysDateString = [formatter stringFromDate:todaysDate];
+    NSComparisonResult containerResult = [todaysDateString compare:containerString];
+    if (containerResult != NSOrderedSame) {
+        [[LogItemStore sharedStore]setCurrentItemContainer];
+        [[OutputLogItemStore sharedStore]setCurrentItemContainer];
+        NSNotification *note = [NSNotification notificationWithName:@"newDay" object:nil];
+        [[NSNotificationCenter  defaultCenter]postNotification:note];
+    }
+   ;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
-
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    
+}
+-(void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"erroloading");
+    [currentControl hideBannerView:bannerView animated:YES];
+}
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    if (currentControl==viewController) {
+        return;
+    }
+    if (bannerView.bannerLoaded) {
+        
+        [currentControl hideBannerView:bannerView animated:NO];
+        [(UIViewController<BannerViewContainer> *)viewController showBannerView:bannerView animated:YES];
+    }
+    
+    currentControl = (UIViewController<BannerViewContainer> *)viewController;
+}
 @end
