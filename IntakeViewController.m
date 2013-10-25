@@ -268,8 +268,12 @@ static int number=1;
     
     NSArray *barArray = [[NSArray alloc]initWithObjects:barBack, flexItem, dateButton, flexItem, barItemForward, nil];
     [toolBar setItems:barArray];
-    
-    
+    myBannerView = [[ADBannerView alloc]init];
+    [[self view]addSubview:myBannerView];
+    myBannerView.delegate =self;
+    CGRect bannerFrame = myBannerView.frame;
+    bannerFrame.origin.y = frame.size.height;
+    myBannerView.frame =bannerFrame;
     [dateButton setTitle:dateString];
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         self.tableView.rowHeight = 175.0;
@@ -280,8 +284,8 @@ static int number=1;
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    CGRect screenRect = [[UIScreen mainScreen]applicationFrame];
     
+    CGRect screenRect = [[UIScreen mainScreen]applicationFrame];
     if ((UIDeviceOrientationIsLandscape([self interfaceOrientation]) && [UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPhone)) {
         
         tableView.frame = CGRectMake(0.0, screenRect.origin.y +[UIApplication sharedApplication].statusBarFrame.size.width + topToolBar.frame.size.height, screenRect.size.height, screenRect.size.width-2*toolBar.frame.size.height);
@@ -301,6 +305,7 @@ static int number=1;
     CGRect screenRect = [[UIScreen mainScreen]applicationFrame];
     if (UIDeviceOrientationIsLandscape([self interfaceOrientation])) {
         tableView.frame = CGRectMake(0.0, screenRect.origin.y+ [UIApplication sharedApplication].statusBarFrame.size.width+ topToolBar.frame.size.height, screenRect.size.width-(screenRect.size.width -screenRect.size.height), screenRect.size.height-2*toolBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.width);
+       
         
     }
     else
@@ -502,30 +507,52 @@ static int number=1;
         }
     }
 }
--(void)showBannerView:(ADBannerView *)bannerView animated:(BOOL)animated
-{
-    myBannerView = bannerView;
-    NSLog(@"ad called");
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    
+    myBannerView = banner;
+    [myBannerView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin];
+    [myBannerView setAutoresizesSubviews:YES];
     CGRect screenFrame = [[UIScreen mainScreen]applicationFrame];
     CGRect frame;
     if ([UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
-        if (UIDeviceOrientationIsLandscape([self interfaceOrientation])) {
-            frame = CGRectMake(0.0, screenFrame.origin.y+screenFrame.size.height-2*topToolBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height, 0.0, 0.0);
+        if (UIDeviceOrientationIsLandscape([self interfaceOrientation])){
+            frame = CGRectMake(0.0, screenFrame.origin.y+screenFrame.size.width-topToolBar.frame.size.height-toolBar.frame.size.height-5.0, self.view.frame.size.width, 0.0);
+            tableView.frame = CGRectMake(0.0, screenFrame.origin.y +[UIApplication sharedApplication].statusBarFrame.size.width + topToolBar.frame.size.height, screenFrame.size.height, screenFrame.size.width-2*toolBar.frame.size.height);
         }
-        else
-            frame = CGRectMake(0.0, screenFrame.origin.y+screenFrame.size.height-topToolBar.frame.size.height-toolBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height, 0.0, 0.0);
+        else{
+            frame = CGRectMake(0.0, screenFrame.origin.y+screenFrame.size.height-topToolBar.frame.size.height-toolBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height-5.0, 0.0, 0.0);
+            tableView.frame = CGRectMake(0.0, screenFrame.origin.y +topToolBar.frame.size.height, screenFrame.size.width, screenFrame.size.height-2*toolBar.frame.size.height-20.0);
+        }
     }
-    else
-        frame =CGRectMake(0.0, screenFrame.origin.y+screenFrame.size.height-topToolBar.frame.size.height-toolBar.frame.size.height, 0.0, 0.0);
-    myBannerView.frame =frame;
-    tableView.frame = CGRectMake(0.0, screenFrame.origin.y +topToolBar.frame.size.height, screenFrame.size.width, screenFrame.size.height-2*toolBar.frame.size.height-20.0);
-    [tableView reloadData];
-    [[self view]addSubview:myBannerView];
     
+    else{
+        frame =CGRectMake(0.0, screenFrame.origin.y+screenFrame.size.height-topToolBar.frame.size.height-toolBar.frame.size.height, 0.0, 0.0);
+        tableView.frame = CGRectMake(0.0, screenFrame.origin.y +topToolBar.frame.size.height, screenFrame.size.width, screenFrame.size.height-2*toolBar.frame.size.height-20.0);
+    }
+    myBannerView.frame =frame;
 }
 -(void)hideBannerView:(ADBannerView *)bannerView animated:(BOOL)animated
 {
     myBannerView = nil;
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+   CGRect contentFrame = self.view.bounds;
+    CGRect bannerFrame = myBannerView.frame;
+        bannerFrame.origin.y = contentFrame.size.height;
+        myBannerView.frame = bannerFrame;
+    CGRect screenRect = [[UIScreen mainScreen]applicationFrame];
+    if ((UIDeviceOrientationIsLandscape([self interfaceOrientation]) && [UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPhone)) {
+        
+        tableView.frame = CGRectMake(0.0, screenRect.origin.y +[UIApplication sharedApplication].statusBarFrame.size.width + topToolBar.frame.size.height, screenRect.size.height, screenRect.size.width-2*toolBar.frame.size.height);
+    }
+    else
+    {
+        tableView.frame = CGRectMake(0.0, screenRect.origin.y +topToolBar.frame.size.height, screenRect.size.width, screenRect.size.height-2*toolBar.frame.size.height);
+    }
+    [tableView reloadData];
+    
 }
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;

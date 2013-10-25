@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        NSArray *viewArray = [[NSArray alloc]initWithObjects:@"", @"Poop",@"Pee", @"Pee accident",@"Poop accident", nil];
+        NSArray *viewArray = [[NSArray alloc]initWithObjects:@"", @"Pee",@"Poop", @"Pee accident",@"Poop accident", nil];
         pickerTypes = viewArray;
     }
     return self;

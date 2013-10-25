@@ -547,6 +547,11 @@
 				CLASSPREFIX = UroApp;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jeremy Wiygul";
+				TargetAttributes = {
+					E8B91189163ED96F0044667E = {
+						DevelopmentTeam = 59W95GZCEN;
+					};
+				};
 			};
 			buildConfigurationList = E8B91184163ED96F0044667E /* Build configuration list for PBXProject "UroApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -757,7 +762,7 @@
 		E8B911A9163ED9700044667E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -778,7 +783,7 @@
 		E8B911AA163ED9700044667E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UroApp/UroApp-Prefix.pch";

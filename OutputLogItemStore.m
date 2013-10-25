@@ -202,6 +202,8 @@
     
     [itemContainer removeAllObjects];
     [itemContainer addObject:newContainer];
+    [newContainer setAlreadySetPeeAward:NO];
+    [newContainer setAlreadySetPoopAward:NO];
   
     [self saveChanges];
 }

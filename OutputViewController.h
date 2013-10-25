@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <iAd/iAd.h>
 #import "UroAppAppDelegate.h"
-@interface OutputViewController : UIViewController <UITableViewDataSource,UITableViewDelegate, BannerViewContainer>
+@interface OutputViewController : UIViewController <UITableViewDataSource,UITableViewDelegate, ADBannerViewDelegate, BannerViewContainer>
 {
     int orientationNumber;
 }

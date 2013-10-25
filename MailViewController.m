@@ -256,7 +256,7 @@ static int earnedPoopBadge = 0;
     CGRect rect;
    
     if (UIDeviceOrientationIsLandscape([self interfaceOrientation])&& [UIDevice currentDevice].userInterfaceIdiom !=UIUserInterfaceIdiomPhone) {
-        rect = CGRectMake(0.0, screenRect.origin.y, toolSize.width-(screenRect.size.height-screenRect.size.width)+ [UIApplication sharedApplication].statusBarFrame.size.width, toolSize.height);
+        rect = CGRectMake(0.0, screenRect.origin.y, toolSize.width, toolSize.height+0.5*[UIApplication sharedApplication].statusBarFrame.size.width);
     }
     else
         rect = CGRectMake(0.0, screenRect.origin.y-[UIApplication sharedApplication].statusBarFrame.size.height, toolSize.width, toolSize.height+0.5*[UIApplication sharedApplication].statusBarFrame.size.height);

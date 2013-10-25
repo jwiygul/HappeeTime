@@ -24,6 +24,9 @@
         BristolView *blankView2 = [[BristolView alloc]init];
         [viewArray addObject:blankView2];
         
+        BristolView *blankView3=[[BristolView alloc]init];
+        [viewArray addObject:blankView3];
+        
         BristolView * type1View = [[BristolView alloc]initWithFrame:CGRectZero];
         type1View.title = @"Type 1";
         type1View.image = [UIImage imageNamed:@"Type1.png"];
@@ -62,7 +65,7 @@
         type7View.image = [UIImage imageNamed:@"Type7.png"];
         [viewArray addObject:type7View];
         
-        NSMutableArray *anotherArray = [[NSMutableArray alloc]initWithObjects:@"",@"",@"Type 1",@"Type 2",@"Type 3",@"Type 4",@"Type 5",@"Type 6",@"Type 7", nil];
+        NSMutableArray *anotherArray = [[NSMutableArray alloc]initWithObjects:@"",@"",@"",@"Type 1",@"Type 2",@"Type 3",@"Type 4",@"Type 5",@"Type 6",@"Type 7", nil];
         pickerTypes = viewArray;
         poopTypes = anotherArray;
         

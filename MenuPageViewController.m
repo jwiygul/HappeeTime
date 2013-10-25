@@ -36,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self view].autoresizesSubviews=YES;
+    [self view].autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     // Do any additional setup after loading the view from its nib.
 }
 
