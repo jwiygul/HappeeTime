@@ -143,9 +143,10 @@ static int applicationBadge = 0;
 }
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    NSLog(@"erroloading");
+    
     [currentControl hideBannerView:bannerView animated:YES];
 }
+
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     if (currentControl==viewController) {
@@ -154,9 +155,10 @@ static int applicationBadge = 0;
     if (bannerView.bannerLoaded) {
         
         [currentControl hideBannerView:bannerView animated:NO];
-        [(UIViewController<BannerViewContainer> *)viewController showBannerView:bannerView animated:YES];
+        //[(UIViewController<BannerViewContainer> *)viewController showBannerView:bannerView animated:YES];
     }
     
     currentControl = (UIViewController<BannerViewContainer> *)viewController;
 }
+
 @end

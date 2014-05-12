@@ -146,7 +146,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *file_Path = [documentsDirectory stringByAppendingPathComponent:@"log.txt"];
-    UIButton *myButton=[[UIButton alloc]init];
+   
     
     
     NSMutableString *printString = [NSMutableString stringWithString:@"INTAKE \n"];
@@ -237,9 +237,11 @@
     
     NSError *error;
     
-   [printString writeToFile:file_Path atomically:YES encoding:NSUnicodeStringEncoding error:&error];
+    
+    
     NSData *evenMoreData = [NSData dataWithContentsOfFile:file_Path];
-    [picker addAttachmentData:evenMoreData mimeType:nil fileName:@"log"];
+    NSString *mimeString = @"text/rtf";
+    [picker addAttachmentData:evenMoreData mimeType:mimeString fileName:@"log.txt"];
 	[self presentViewController:picker animated:YES completion:nil];
     
 }

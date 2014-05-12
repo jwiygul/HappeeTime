@@ -85,11 +85,15 @@
 		F72F239E166FBAD3006FE873 /* BlueBackgroundPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F72F239D166FBAD3006FE873 /* BlueBackgroundPad.png */; };
 		F72F23A0166FBAE6006FE873 /* BluBackgroundPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F72F239F166FBAE6006FE873 /* BluBackgroundPhone.png */; };
 		F75723351682399F00F26F47 /* AwardCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F75723341682399F00F26F47 /* AwardCellPad.xib */; };
+		F7695990181ADBAA0078CE14 /* HelpfulAnimaliPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F769598F181ADBAA0078CE14 /* HelpfulAnimaliPad.png */; };
+		F7695996181ADC9A0078CE14 /* HelpfulAnimalPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F7695995181ADC9A0078CE14 /* HelpfulAnimalPhone.png */; };
+		F769599A181ADD9C0078CE14 /* hpPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F7695999181ADD9C0078CE14 /* hpPad.png */; };
+		F769599C181ADE090078CE14 /* hpPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F769599B181ADE090078CE14 /* hpPhone.png */; };
+		F769599E181AE35E0078CE14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F769599D181AE35E0078CE14 /* Images.xcassets */; };
 		F79AD117166708B4004259BA /* MenuPagePadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79AD116166708B4004259BA /* MenuPagePadViewController.xib */; };
 		F7AFBF58167910D50050D1D9 /* explosionPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFBF57167910D50050D1D9 /* explosionPhone.png */; };
 		F7AFBF5A167910DE0050D1D9 /* explosionPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFBF59167910DE0050D1D9 /* explosionPad.png */; };
 		F7AFBF5C167911270050D1D9 /* HelpfulAnimalPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFBF5B167911270050D1D9 /* HelpfulAnimalPhone.png */; };
-		F7AFBF5E1679112D0050D1D9 /* HelpfulAnimalPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFBF5D1679112D0050D1D9 /* HelpfulAnimalPad.png */; };
 		F7B4FF6E16A498A90096C1E6 /* ThumbsUpiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B4FF6D16A498A90096C1E6 /* ThumbsUpiPad.png */; };
 		F7B4FF7116A498E40096C1E6 /* FlushiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B4FF6F16A498E40096C1E6 /* FlushiPad.png */; };
 		F7B4FF7216A498E40096C1E6 /* FlushiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B4FF7016A498E40096C1E6 /* FlushiPhone.png */; };
@@ -234,11 +238,15 @@
 		F72F239D166FBAD3006FE873 /* BlueBackgroundPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueBackgroundPad.png; sourceTree = "<group>"; };
 		F72F239F166FBAE6006FE873 /* BluBackgroundPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BluBackgroundPhone.png; sourceTree = "<group>"; };
 		F75723341682399F00F26F47 /* AwardCellPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AwardCellPad.xib; sourceTree = "<group>"; };
+		F769598F181ADBAA0078CE14 /* HelpfulAnimaliPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelpfulAnimaliPad.png; sourceTree = "<group>"; };
+		F7695995181ADC9A0078CE14 /* HelpfulAnimalPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelpfulAnimalPhone.png; sourceTree = "<group>"; };
+		F7695999181ADD9C0078CE14 /* hpPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hpPad.png; sourceTree = "<group>"; };
+		F769599B181ADE090078CE14 /* hpPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hpPhone.png; sourceTree = "<group>"; };
+		F769599D181AE35E0078CE14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HapPeeTime/Images.xcassets; sourceTree = "<group>"; };
 		F79AD116166708B4004259BA /* MenuPagePadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuPagePadViewController.xib; sourceTree = "<group>"; };
 		F7AFBF57167910D50050D1D9 /* explosionPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosionPhone.png; sourceTree = "<group>"; };
 		F7AFBF59167910DE0050D1D9 /* explosionPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosionPad.png; sourceTree = "<group>"; };
 		F7AFBF5B167911270050D1D9 /* HelpfulAnimalPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelpfulAnimalPhone.png; sourceTree = "<group>"; };
-		F7AFBF5D1679112D0050D1D9 /* HelpfulAnimalPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelpfulAnimalPad.png; sourceTree = "<group>"; };
 		F7B4FF6D16A498A90096C1E6 /* ThumbsUpiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbsUpiPad.png; sourceTree = "<group>"; };
 		F7B4FF6F16A498E40096C1E6 /* FlushiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlushiPad.png; sourceTree = "<group>"; };
 		F7B4FF7016A498E40096C1E6 /* FlushiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlushiPhone.png; sourceTree = "<group>"; };
@@ -306,6 +314,7 @@
 		E8B9117F163ED96F0044667E = {
 			isa = PBXGroup;
 			children = (
+				F769599D181AE35E0078CE14 /* Images.xcassets */,
 				F702742317CBD2560069AAF4 /* iAd.framework */,
 				F7D4D6DF16F16755006E1D61 /* Default-568h@2x.png */,
 				F7D4D6DD16F16751006E1D61 /* Default@2x.png */,
@@ -499,7 +508,10 @@
 				F7B4FF7016A498E40096C1E6 /* FlushiPhone.png */,
 				F7B4FF6D16A498A90096C1E6 /* ThumbsUpiPad.png */,
 				F7BE9EEF16A0808F008C2592 /* homeIcon.png */,
-				F7AFBF5D1679112D0050D1D9 /* HelpfulAnimalPad.png */,
+				F7695995181ADC9A0078CE14 /* HelpfulAnimalPhone.png */,
+				F769598F181ADBAA0078CE14 /* HelpfulAnimaliPad.png */,
+				F769599B181ADE090078CE14 /* hpPhone.png */,
+				F7695999181ADD9C0078CE14 /* hpPad.png */,
 				F7AFBF5B167911270050D1D9 /* HelpfulAnimalPhone.png */,
 				F7F567341682A25100888F30 /* medalGrey1.png */,
 				F7AFBF59167910DE0050D1D9 /* explosionPad.png */,
@@ -547,11 +559,6 @@
 				CLASSPREFIX = UroApp;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jeremy Wiygul";
-				TargetAttributes = {
-					E8B91189163ED96F0044667E = {
-						DevelopmentTeam = 59W95GZCEN;
-					};
-				};
 			};
 			buildConfigurationList = E8B91184163ED96F0044667E /* Build configuration list for PBXProject "UroApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -575,6 +582,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7695990181ADBAA0078CE14 /* HelpfulAnimaliPad.png in Resources */,
 				E8B91199163ED96F0044667E /* InfoPlist.strings in Resources */,
 				E8B91207163EE5A60044667E /* VoidingLogCell.xib in Resources */,
 				E8B91209163EE8250044667E /* AwardCell.xib in Resources */,
@@ -589,6 +597,7 @@
 				E8B7E58C163F057200E2DC5C /* Type6.png in Resources */,
 				E8B7E58D163F057200E2DC5C /* Type7.png in Resources */,
 				E81BA455164041CF00616CC7 /* helpfulAnimal.pdf in Resources */,
+				F769599E181AE35E0078CE14 /* Images.xcassets in Resources */,
 				E81BA458164042E500616CC7 /* helpfulDragon.png in Resources */,
 				E85CF01716415A8600C5238D /* warningIcon.png in Resources */,
 				E85CF0311641AC0D00C5238D /* otherHelpfulIcon.png in Resources */,
@@ -601,6 +610,7 @@
 				E8F9384B164B48590078F593 /* BWOutput.png in Resources */,
 				E8FA6269164C4CC4000286D5 /* inputgrey.png in Resources */,
 				E8D6F37A1653ED3B0066172A /* helpfulDragonPS.png in Resources */,
+				F769599C181ADE090078CE14 /* hpPhone.png in Resources */,
 				E8FF362916547C8700A627E9 /* GreyOutput.png in Resources */,
 				E8FF362C16547C8F00A627E9 /* medalGrey.png in Resources */,
 				F72ACFE71663BE04001FD484 /* DinosaurThumbsUP.png in Resources */,
@@ -615,8 +625,8 @@
 				F7DCBD4F167435F10007390D /* OutputLogCellPad.xib in Resources */,
 				F7AFBF58167910D50050D1D9 /* explosionPhone.png in Resources */,
 				F7AFBF5A167910DE0050D1D9 /* explosionPad.png in Resources */,
+				F769599A181ADD9C0078CE14 /* hpPad.png in Resources */,
 				F7AFBF5C167911270050D1D9 /* HelpfulAnimalPhone.png in Resources */,
-				F7AFBF5E1679112D0050D1D9 /* HelpfulAnimalPad.png in Resources */,
 				F75723351682399F00F26F47 /* AwardCellPad.xib in Resources */,
 				F7F567351682A25100888F30 /* medalGrey1.png in Resources */,
 				F7BE9EF016A0808F008C2592 /* homeIcon.png in Resources */,
@@ -625,6 +635,7 @@
 				F7B4FF7216A498E40096C1E6 /* FlushiPhone.png in Resources */,
 				F7B4FF7916A499C80096C1E6 /* PoopiPad.png in Resources */,
 				F7B4FF7A16A499C80096C1E6 /* PoopiPhone.png in Resources */,
+				F7695996181ADC9A0078CE14 /* HelpfulAnimalPhone.png in Resources */,
 				F7F9441B16F00CA400A74912 /* HPMenuPageiPad.png in Resources */,
 				F7F9441D16F00CAE00A74912 /* HPmenuPage.png in Resources */,
 				F7F9442B16F0129F00A74912 /* HPThumbsUpiPhone.png in Resources */,
@@ -762,20 +773,24 @@
 		E8B911A9163ED9700044667E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeremy Wiygul (NZ8DZ9RK33)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Jeremy Wiygul (NZ8DZ9RK33)";
 				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UroApp/UroApp-Prefix.pch";
 				INFOPLIST_FILE = "UroApp/UroApp-Info.plist";
 				INSTALL_PATH = /Applications/;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "D7FCD155-7B92-49EE-9715-9DF73DE77033";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D7FCD155-7B92-49EE-9715-9DF73DE77033";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s armv64";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -783,18 +798,23 @@
 		E8B911AA163ED9700044667E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeremy Wiygul (NZ8DZ9RK33)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jeremy Wiygul (NZ8DZ9RK33)";
 				DEPLOYMENT_LOCATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UroApp/UroApp-Prefix.pch";
 				INFOPLIST_FILE = "UroApp/UroApp-Info.plist";
 				INSTALL_PATH = /Applications/;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D7FCD155-7B92-49EE-9715-9DF73DE77033";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s armv64";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

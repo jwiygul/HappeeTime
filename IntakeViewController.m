@@ -310,12 +310,12 @@ static int number=1;
     }
     else
     {
-        
         tableView.frame = CGRectMake(0.0, screenRect.origin.y +topToolBar.frame.size.height, screenRect.size.width, screenRect.size.width-2*toolBar.frame.size.height);
     }
     
     [tableView reloadData];
 }
+
 
 -(void)startEdit:(id)sender
 {
@@ -531,6 +531,7 @@ static int number=1;
         tableView.frame = CGRectMake(0.0, screenFrame.origin.y +topToolBar.frame.size.height, screenFrame.size.width, screenFrame.size.height-2*toolBar.frame.size.height-20.0);
     }
     myBannerView.frame =frame;
+   
 }
 -(void)hideBannerView:(ADBannerView *)bannerView animated:(BOOL)animated
 {
@@ -540,6 +541,13 @@ static int number=1;
 {
    CGRect contentFrame = self.view.bounds;
     CGRect bannerFrame = myBannerView.frame;
+    if ([[UIDevice currentDevice]userInterfaceIdiom]==UIUserInterfaceIdiomPad) {
+        if (UIDeviceOrientationIsLandscape([self interfaceOrientation]))
+        bannerFrame.origin.y = contentFrame.size.width;
+        else
+            bannerFrame.origin.y = contentFrame.size.height;
+    }
+    else
         bannerFrame.origin.y = contentFrame.size.height;
         myBannerView.frame = bannerFrame;
     CGRect screenRect = [[UIScreen mainScreen]applicationFrame];

@@ -404,6 +404,7 @@ static int number = 1;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
     
     myBannerView = banner;
@@ -436,7 +437,14 @@ static int number = 1;
 {
     CGRect contentFrame = self.view.bounds;
     CGRect bannerFrame = myBannerView.frame;
-    bannerFrame.origin.y = contentFrame.size.height;
+    if ([[UIDevice currentDevice]userInterfaceIdiom]==UIUserInterfaceIdiomPad) {
+        if (UIDeviceOrientationIsLandscape([self interfaceOrientation]))
+            bannerFrame.origin.y = contentFrame.size.width;
+        else
+            bannerFrame.origin.y = contentFrame.size.height;
+    }
+    else
+        bannerFrame.origin.y = contentFrame.size.height;
     myBannerView.frame = bannerFrame;
     CGRect screenRect = [[UIScreen mainScreen]applicationFrame];
     
